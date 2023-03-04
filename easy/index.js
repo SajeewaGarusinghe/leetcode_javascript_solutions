@@ -1,21 +1,31 @@
-//  118. Pascal's Triangle
+//69. Sqrt(x)
 
-var generate = function (numRows) {
-  if (numRows == 0) return [];
-  if (numRows == 1) return [[1]];
-  let result = [];
-  for (raw = 1; raw <= numRows; raw++) {
-    let arr = [];
-    for (col = 0; col < raw; col++) {
-      if (col == 0 || col == raw - 1) {
-        arr.push(1);
-      } else {
-        arr.push(result[raw - 2][col - 1] + result[raw - 2][col]);
-      }
-    }
-    result.push(arr);
-  }
-  return result;
+// let us find the square root of 25.
+
+//     25 – 1 = 24
+//     24 – 3 = 21
+//     21 – 5 = 16
+//     16 – 7 = 9
+//     9 – 9 = 0
+
+// Since, the subtraction is done for 5 times, hence the square root of 25 is 5.
+
+var mySqrt = function (x) {
+  if (x == 0) return 0;
+  let odd = 1;
+  let count = 0;
+
+  do {
+    odd += 2;
+    x -= odd;
+    count++;
+  } while (x > 0);
+
+  return count;
 };
 
-console.log(generate(4));
+console.log(mySqrt(0));
+
+var mySqrt1 = function (x) {
+  return (rezult = Math.floor(Math.sqrt(x)));
+};

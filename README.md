@@ -13,6 +13,8 @@
 - [268. Missing Number](/easy/268.js)
 - [136. Single Number](/easy/136.js)
 - [118. Pascal's Triangle](/easy/118.js)
+- [412. Fizz Buzz](/easy/412.js)
+- [69. Sqrt(x)](/easy/69.js)
 
 - Linked List
   - [21. Merge Two Sorted Lists](/easy/21.js)
