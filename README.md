@@ -12,6 +12,7 @@
 - [26. Remove Duplicates from Sorted Array](/easy/26.js)
 - [268. Missing Number](/easy/268.js)
 - [136. Single Number](/easy/136.js)
+- [118. Pascal's Triangle](/easy/118.js)
 
 - Linked List
   - [21. Merge Two Sorted Lists](/easy/21.js)
