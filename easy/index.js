@@ -1,31 +1,59 @@
-//69. Sqrt(x)
+// 206. Reverse Linked List
 
-// let us find the square root of 25.
+class Node{
+  constructor(val){
+      this.val = val;
+      this.next = null;
+  }
+}
 
-//     25 – 1 = 24
-//     24 – 3 = 21
-//     21 – 5 = 16
-//     16 – 7 = 9
-//     9 – 9 = 0
+class SinglyLinkedList{
+  constructor(){
+      this.head = null;
+      this.tail = null;
+      this.length = 0;
+  }
+   
+  reverse(){
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    var next;
+    var prev = null;
+    for(var i = 0; i < this.length; i++){
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
+  print(){
+      var arr = [];
+      var current = this.head
+      while(current){
+          arr.push(current.val)
+          current = current.next
+      }
+      console.log(arr);
+  }
+}
 
-// Since, the subtraction is done for 5 times, hence the square root of 25 is 5.
+var list = new SinglyLinkedList()
 
-var mySqrt = function (x) {
-  if (x == 0) return 0;
-  let odd = 1;
-  let count = 0;
+list.push(1)
+list.push(2)
+list.push(3)
+list.push(4)
+list.push(5)
 
-  do {
-    odd += 2;
-    x -= odd;
-    count++;
-  } while (x > 0);
+console.log(list.reverse().print());
 
-  return count;
-};
 
-console.log(mySqrt(0));
 
-var mySqrt1 = function (x) {
-  return (rezult = Math.floor(Math.sqrt(x)));
-};
+
+
+
+
+
+
